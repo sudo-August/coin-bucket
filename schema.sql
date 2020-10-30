@@ -13,7 +13,7 @@ CREATE TABLE transactions(
 	best_bid FLOAT NOT NULL, 
 	best_ask FLOAT NOT NULL, 
 	side TEXT NOT NULL, 
-	time TIMESTAMP NOT NULL, 
+	time TEXT, 
 	trade_id INT NOT NULL, 
 	last_size FLOAT NOT NULL
 );
