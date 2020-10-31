@@ -1,6 +1,7 @@
 ﻿DROP TABLE IF EXISTS transactions;
 
 CREATE TABLE transactions(
+	ID INT NOT NULL PRIMARY KEY,
 	type TEXT NOT NULL, 
 	sequence INT NOT NULL, 
 	product_id TEXT NOT NULL, 

@@ -25,24 +25,23 @@ class Transaction(Base):
     type = Column(String)
     sequence = Column(Integer)
     product_id = Column(String)
-    price = Column(Float)
-    open_24h = Column(Float)
-    volume_24h = Column(Float)
-    low_24h = Column(Float)
-    high_24h = Column(Float)
-    volume_30d = Column(Float)
-    best_bid = Column(Float)
-    best_ask = Column(Float)
+    price = Column(String)
+    open_24h = Column(String)
+    volume_24h = Column(String)
+    low_24h = Column(String)
+    high_24h = Column(String)
+    volume_30d = Column(String)
+    best_bid = Column(String)
+    best_ask = Column(String)
     side = Column(String)
     time = Column(String)
     trade_id = Column(Integer)
-    last_size = Column(Float)
+    last_size = Column(String)
 
     def __repr__(self):
-        return "<Transaction(type='%s', sequence='%d', product_id='%s', price='%f', open_24h='%f', volume_24h='%f', low_24h='%f', high_24h='%f', volume_30d='%f', best_bid='%f', best_ask='%f', side='%s', time='%s', trade_id='%d', last_size='%f')>" % (
-            self.type, self.sequence, self.product_id, self.price, self.open_24h, self.volume_24h, self.low_24h, self.volume_30d, self.best_bid, self.best_ask, self.side, self.time, self.trade_id, self.last_size
+        return "<Transaction(type='%s', sequence='%d', product_id='%s', price='%s', open_24h='%s', volume_24h='%s', low_24h='%s', high_24h='%s', volume_30d='%s', best_bid='%s', best_ask='%s', side='%s', time='%s', trade_id='%d', last_size='%s')>" % (
+            self.type, self.sequence, self.product_id, self.price, self.open_24h, self.volume_24h, self.low_24h, self.high_24h, self.volume_30d, self.best_bid, self.best_ask, self.side, self.time, self.trade_id, self.last_size
         )
-
 
 # erases table transactions if it exists and then recreates it with necessary columns
 def init_db():
