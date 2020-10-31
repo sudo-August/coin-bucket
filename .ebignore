@@ -1,0 +1,10 @@
+venv
+.env
+.gitignore
+coin-bucket
+.vscode
+instance
+db-tester.ipynb
+go.ps1
+README.md
+schema.sql
